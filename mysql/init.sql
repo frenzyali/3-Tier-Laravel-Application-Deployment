@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS laracoffee;
+CREATE DATABASE IF NOT EXISTS crud;
+CREATE DATABASE IF NOT EXISTS realworld;
+
+GRANT ALL PRIVILEGES ON laracoffee.* TO 'myapp_user'@'%';
+GRANT ALL PRIVILEGES ON crud.* TO 'myapp_user'@'%';
+GRANT ALL PRIVILEGES ON realworld.* TO 'myapp_user'@'%';
+
+FLUSH PRIVILEGES;
+

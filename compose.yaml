@@ -1,0 +1,54 @@
+services:
+  realworld:
+    build: ./realworld
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - ./envs/realworld.env
+
+  crud:
+    build: ./crud
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - ./envs/crud.env
+
+  coffee:
+    build: ./coffee
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - ./envs/coffee.env
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - realworld
+      - crud
+      - coffee
+
+  db:
+    image: mysql:8.0
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./mysql:/docker-entrypoint-initdb.d
+    env_file:
+      - ./envs/db.env
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  db-data:
+
+
+
