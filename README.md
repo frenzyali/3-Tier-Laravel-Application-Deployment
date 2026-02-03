@@ -78,9 +78,6 @@ Services included:
 * `db` (MySQL)
 * `nginx`
 
-<img width="2440" height="5072" alt="compose yaml" src="https://github.com/user-attachments/assets/95f0a2a0-bd36-4a49-a1e7-3d6bbe1d3b9d" />
-
-
 ---
 
 ## 🐘 Laravel Containers
@@ -129,9 +126,6 @@ Nginx proxies requests internally to:
 * `crud:8001`
 * `realworld:8000`
 
-<img width="2220" height="2464" alt="reverse-proxy conf" src="https://github.com/user-attachments/assets/4542f118-18c4-48f7-bf11-e2912a53c98a" />
-
-
 ## ▶️ How to Run
 
 ```bash
@@ -146,14 +140,4 @@ Then access:
 
 ---
 
-## 🎯 Purpose of This Project
 
-* Practice **Docker + Laravel**
-* Understand **multi‑app architecture**
-* Learn **Nginx reverse proxying**
-* Handle **real‑world container issues**
-
----
-
-
-If you’re reading this and learning Docker/Laravel — trust me, breaking things is part of the process 😄
