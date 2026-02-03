@@ -5,5 +5,4 @@ envs/
 /crud/.env.example
 /realworld/.env
 /realworld/.env.example
-*.env
-*.example
+
