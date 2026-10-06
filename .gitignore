@@ -1,8 +1,2 @@
 envs/
-/coffee/.env
-/coffee/.env.example
-/crud/.env
-/crud/.env.example
-/realworld/.env
-/realworld/.env.example
-
+.env

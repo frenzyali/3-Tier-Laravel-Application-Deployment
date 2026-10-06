@@ -1,0 +1,7 @@
+# Treat Blade templates as PHP so they aren't reported as a separate language
+*.blade.php linguist-language=PHP
+
+# Bundled admin-template assets and screenshots are not project source
+**/public/js/** linguist-vendored
+**/public/css/** linguist-vendored
+coffee/storage/assets/** linguist-documentation
